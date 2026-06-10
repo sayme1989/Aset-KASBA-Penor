@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sistem KASBA Penjara Penor</title>
+    <!-- Ikon Tab Browser (Favicon) -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/GttXw884/kasba.png">
+    <style>
+        /* Buang semua ruang tepi dan jadikan skrin penuh */
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background-color: #f8f9fa; }
+        iframe { width: 100%; height: 100%; border: none; display: block; }
+    </style>
+</head>
+<body>
+
+    <!-- Sistem GAS akan dipaparkan di dalam Iframe ini -->
+    <iframe id="sistemKasba" src=""></iframe>
+
+    <script>
+        // MASUKKAN PAUTAN GOOGLE APPS SCRIPT (GAS) ANDA DI SINI
+        const pautanGAS = "https://script.google.com/macros/s/AKfycbxrVPrg2IZ713_oLyhHhrsjGgmJtfazQcP25UoVEVIOpw0WyY9skTHpkfBH5Fe8Gxr7Cw/exec";
+        
+        // Skrip ini membolehkan Kod QR terus berfungsi melalui GitHub
+        const parameterQR = window.location.search;
+        document.getElementById("sistemKasba").src = pautanGAS + parameterQR;
+    </script>
+
+</body>
+</html>
